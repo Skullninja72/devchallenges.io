@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Space+Mono:wght@400;700&family=Montserrat:wght@600&display=swap');
+
+:root {
+    --color-1: #333333;
+    --color-2: #4f4f4f;
+    --font-1: "Inconsolata", monospace;
+    --font-2: "Space Mono", monospace;
+    --font-3: "Montserrat", sans-serif;
+  }
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+html {
+    margin: 0 auto;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    height: 25px;
+    margin-top: 20px;
+    margin-bottom: 64px;
+}
+
+h1 {
+    font-family: var(--font-1);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: -0.08em;
+    text-transform: uppercase;
+    color: var(--color-1);
+    margin-left: 24px;
+}
+
+.illustration {
+    margin-bottom: 60px;
+    animation-duration: 2s;
+    animation-name: fly-down;
+}
+
+img {
+    display: block;
+    width: 76.488%;
+    height: auto;
+    margin: 0 auto;
+    animation-duration: 2s;
+    animation-name: rotate;
+}
+
+.content {
+    width: 100%;
+}
+
+.content h2 {
+    width: 350px;
+    height: 142px;
+    font-family: var(--font-2);
+    font-size: 48px;
+    line-height: 71px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: -0.035em;
+    color: var(--color-1);
+    margin-left: 6.4%;
+    margin-bottom: 20px;
+}
+
+.content p {
+    width: 328px;
+    height: 81px;
+    font-family: var(--font-2);
+    font-size: 18px;
+    line-height: 27px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: -0.035em;
+    color: var(--color-2);
+    margin-left: 6.4%;
+    margin-bottom: 90px;
+}
+
+.btn {
+    font-family: var(--font-2);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.035em;
+    text-transform: uppercase;
+    color: #FFF;
+    padding: 24px 43px;
+    margin-left: 6.4%;
+    background: var(--color-1);
+}
+
+.btn:hover {
+    background-color: var(--color-2);
+}
+
+footer {
+    margin-top: 119px;
+    margin-bottom: 42px;
+}
+
+footer p {
+    font-family: var(--font-3);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: var(--color-1);
+}
+
+footer a:hover {
+    color: #4f4f4f;
+    text-decoration: underline #4f4f4f;
+}
+
+@media screen and (min-width: 480px){
+    .content div {
+        width: 350px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 768px){
+
+    img {
+        width: 539.22px;
+        height: 447.43px;
+    }
+    .content div {
+        width: 420px;
+        margin: 0 auto;
+    }
+
+    .content h2 {
+        width: 400px;
+        font-size: 56px;
+        line-height: 80px;
+        margin-bottom: 36px;
+    }
+
+    .content p {
+        width: 400px;
+        font-size: 21px;
+        line-height: 30px;
+        margin-bottom: 75px;
+    }
+
+}
+
+@media screen and (min-width: 1300px){
+    html {
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+
+    body {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    header {
+        flex-basis: 100%;
+        margin-top: 40px;
+        margin-bottom: 200px;
+    }
+
+    h1 {
+        margin-left: 77px;
+    }
+
+    .illustration {
+        width: 539.22px;
+        height: 447.43;
+        margin-left: 74px;
+    }
+
+    img {
+        width: 539.22px;
+        height: 447.43px;
+    }
+
+    .content {
+        flex-basis: 586px;
+        height: 467px;
+        animation-duration: 2s;
+        animation-name: fly-content;
+    }
+
+    .content h2 {
+        width: 586px;
+        height: 190px;
+        font-size: 64px;
+        line-height: 95px;
+        margin-bottom: 36px;
+    }
+
+    .content p {
+        flex-basis: 381px;
+        height: 108px;
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 88px;
+    }
+
+    footer {
+        flex-basis: 100%;
+        margin-top: 254px;
+        margin-bottom: 39px;
+    }
+}
+
+@keyframes fly-down {
+    from {
+      margin-bottom: 1000px;
+    }
+  
+    to {
+      margin-bottom: 60px;
+    }
+  }
+
+  @keyframes fly-content {
+    from {
+      margin-top: 300%;
+    }
+  
+    to {
+      margin-top: 0%;
+    }
+  }
+
+  @keyframes rotate {
+      from {
+         transform: rotate(0deg); 
+      }
+      
+      to {
+          transform:rotate(360deg);
+      }
+  }
